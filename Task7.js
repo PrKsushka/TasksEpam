@@ -4,7 +4,7 @@
 //3. Получить день, месяц и год текущей даты и по отдельности вывести в консоль
 
 //1
-let str = 'ahb acb aeb aeeb adcb axeb'
+const str = 'ahb acb aeb aeeb adcb axeb'
 
 function regExpStr1(str) {
     if (str !== undefined && str.length > 0) {
@@ -18,7 +18,7 @@ function regExpStr1(str) {
 console.log(regExpStr1(str));
 
 //2
-let str1 = '2+3 223 2223';
+const str1 = '2+3 223 2223';
 
 function regExpStr2(str) {
     if (str !== undefined && str.length > 0) {
@@ -33,8 +33,11 @@ console.log(regExpStr2(str1));
 
 
 //3
-function whatIsTheDateToday() {
-    let date, day, month, year;
+function defineWhatIsTheDateToday() {
+    let date;
+    let day;
+    let month;
+    let year;
     date = new Date();
     day = date.getDate();
     month = date.getMonth() + 1;
@@ -42,4 +45,4 @@ function whatIsTheDateToday() {
     return `Day: ${day}, Month: ${month}, Year: ${year}`
 }
 
-console.log(whatIsTheDateToday());
+console.log(defineWhatIsTheDateToday());
