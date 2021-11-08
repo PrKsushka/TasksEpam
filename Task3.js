@@ -2,9 +2,9 @@
 // Выполнить сложение различных типов(string+boolean, string+number, number+boolean)
 // Выполнить умножение различных типов(string * boolean, string * number, number * boolean)
 // Выполнить деление различных типов(string/boolean, string/number, number/Boolean)
-let str = 'hello world';
-let num = 5;
-let bool = true;
+const str = 'hello world';
+const num = 5;
+const bool = true;
 
 function calculate(a, sign, b) {
     switch (sign) {
