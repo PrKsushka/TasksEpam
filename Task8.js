@@ -6,7 +6,7 @@ try {
     console.log(a);
     let a = 3;
 } catch (e) {
-    e = new Error('let перед использованием нужно объявить');
+    e.message='let перед использованием нужно объявить';
     console.log(e);
 }
 
