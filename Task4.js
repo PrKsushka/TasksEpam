@@ -22,7 +22,7 @@ function fruits(apple, pear) {
     } else if (apple == 0 && pear == 0) {
         return 'there are no fruits on the store';
     } else if (apple > 0 || pear > 0) {
-        return `Count of apples and pears equal to ${apple + pear}`;
+        return apple + pear;
     }
 
 }
@@ -33,10 +33,11 @@ console.log(fruits(10, 10));
 // -В терминале оплаты сохранено ваше имя, напишите функцию для определения имени в терминале(если вы ввели ваше имя, то привет + имя, если нет, то нет такого имени)
 
 function terminal(name) {
+    let newName = name.slice(0, 1) + name.slice(1, name.length).toLowerCase();
     let arrNames = ['Ksenia', 'Masha', 'Dasha', 'Irina'];
-    if (name !== undefined && name !== '') {
+    if (newName !== undefined && newName !== '') {
         let res = arrNames.filter((el) => {
-            return el === name
+            return el === newName
         });
         return (res.length > 0) ? `Привет ${res.join(' ')}` : 'нет такого имени'
     } else return 'check string';
@@ -47,27 +48,28 @@ console.log(terminal('Irina'));
 
 // -Напишите функцию вычисления типа аргумента и вывод типа в консоль
 function decideType(x) {
-    return typeof x;
+    return console.log(typeof x);
 }
 
-console.log(decideType(10));
+decideType(10);
 
 
 // -Напишите функцию, которая определяет является ли число простым или нет
-function SimpleDimple(a) {
+function primeNumber(a) {
     let flag = true;
     if ((typeof a) === 'number' && a > 1) {
         for (let i = 2; i < a; i++) {
-            console.log(i)
             if (a % i == 0) {
                 flag = false;
                 break;
             }
         }
-        return (flag) ? `Number ${a} is simple` : `Number ${a} is not simple`;
+        return (flag) ? `Number ${a} is prime` : `Number ${a} is not prime`;
+    } else if (a <= 1) {
+        return `Number ${a} is not prime`;
     } else {
         return 'check number!';
     }
 }
 
-console.log(SimpleDimple(6));
+console.log(primeNumber(3));
