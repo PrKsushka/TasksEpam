@@ -2,7 +2,9 @@
 // Выполнить сложение различных типов(string+boolean, string+number, number+boolean)
 // Выполнить умножение различных типов(string * boolean, string * number, number * boolean)
 // Выполнить деление различных типов(string/boolean, string/number, number/Boolean)
-let str = 'hello world', num = 5, bool = true;
+let str = 'hello world';
+let num = 5;
+let bool = true;
 
 function calculate(a, sign, b) {
     switch (sign) {
@@ -18,9 +20,20 @@ function calculate(a, sign, b) {
         case '/':
             console.log(`The divide of ${typeof a} and ${typeof b} equal to ${a / b}`);
             break;
+        default:
+            console.log('Wrong opearator. Please try again.');
+            break;
     }
 }
 
+calculate(str,'+',bool);
+calculate(str,'+', num);
+calculate(num, '+', bool);
+calculate(str,'*',bool);
+calculate(str,'*', num);
+calculate(num, '*', bool);
+calculate(str,'/',bool);
+calculate(str,'/', num);
 calculate(num, '/', bool);
 
 // Выполнить явное преобразование(number, string, boolean)
