@@ -52,19 +52,25 @@ console.log(arrSix);
 
 //7
 function arrIndex(arr, numb) {
-    return arr.indexOf(numb);
+    let result = arr.indexOf(numb);
+    (result === -1) ? console.log('this element is not exit in array') : console.log(arr.indexOf(numb))
 }
 
-console.log(arrIndex([1, 2, 3, 4, 5], 5));
+arrIndex([1, 2, 3, 4, 5], 5);
 
 //8
-function elements(a) {
-    do {
-        console.log(a);
-    } while (a > 10)
+function printElements(a) {
+    if (a !== undefined && a >= 10) {
+        while (a >= 10) {
+            console.log(a);
+            a--;
+        }
+    } else {
+        console.log('check your number');
+    }
 }
 
-elements(5);
+printElements(50);
 
 //9
 function isPrime(num) {
@@ -76,7 +82,7 @@ function isPrime(num) {
     return num > 1;
 }
 
-function getIsPrime(n) {
+function getPrimesTillNumber(n) {
     let res = [];
     for (let i = 2; i < n; i++) {
         if (isPrime(i)) {
@@ -86,16 +92,12 @@ function getIsPrime(n) {
     return res;
 }
 
-console.log(getIsPrime(20));
+console.log(getPrimesTillNumber(20));
 
 
 //10
-let arrTen = [];
-for (let i = 1; i <= 20; i++) {
-    arrTen.push(i);
-}
-for (let i = 0; i < arrTen.length; i++) {
-    if (arrTen[i] % 3 == 0) {
-        console.log(arrTen[i])
+for (let i = 0; i < 100; i++) {
+    if (i % 1 == 0 && i % 2 != 0) {
+        console.log(i)
     }
 }
