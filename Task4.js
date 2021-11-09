@@ -42,8 +42,19 @@ function terminal(name) {
         return (res.length > 0) ? `Привет ${res.join(' ')}` : 'нет такого имени'
     } else return 'check string';
 }
+function terminal2(name) {
+    name=name.toLowerCase();
+    let arrNames = ['Ksenia', 'Masha', 'Dasha', 'Irina'];
+    if (name !== undefined && name !== '') {
+        let res = arrNames.filter((el) => {
+            return el.toLowerCase() === name
+        });
+        return (res.length > 0) ? `Привет ${res.join(' ')}` : 'нет такого имени'
+    } else return 'check string';
+}
 
 console.log(terminal('Irina'));
+console.log(terminal2('Irina'));
 
 
 // -Напишите функцию вычисления типа аргумента и вывод типа в консоль
@@ -55,7 +66,7 @@ decideType(10);
 
 
 // -Напишите функцию, которая определяет является ли число простым или нет
-function primeNumber(a) {
+function checkPrime(a) {
     let flag = true;
     if ((typeof a) === 'number' && a > 1) {
         for (let i = 2; i < a; i++) {
@@ -72,4 +83,4 @@ function primeNumber(a) {
     }
 }
 
-console.log(primeNumber(3));
+console.log(checkPrime(3));
